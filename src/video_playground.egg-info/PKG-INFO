@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: video_playground
+Version: 0.1.0
+Summary: Video pipeline playground
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: opencv-python
+Requires-Dist: pytest
+Dynamic: license-file

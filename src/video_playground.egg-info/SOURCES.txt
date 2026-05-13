@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/video_playground.egg-info/PKG-INFO
+src/video_playground.egg-info/SOURCES.txt
+src/video_playground.egg-info/dependency_links.txt
+src/video_playground.egg-info/requires.txt
+src/video_playground.egg-info/top_level.txt
+src/video_playground/ingestion/__init__.py
+src/video_playground/ingestion/opencv_reader.py
+tests/test_video_reader.py
