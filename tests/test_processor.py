@@ -1,9 +1,9 @@
-from video_playground.ingestion.opencv_reader import VideoReader
+from video_playground.ingestion.opencv_reader import OpenCVReader
 from video_playground.processing import GrayscaleProcessor
 
 
 def test_processor_returns_frame(video_path):
-    reader = VideoReader(video_path / "dog_lick_sunflower.mp4")
+    reader = OpenCVReader(video_path / "dog_lick_sunflower.mp4")
 
     _, frame = reader.read()
 
@@ -13,7 +13,7 @@ def test_processor_returns_frame(video_path):
 
 
 def test_reader_processor_pipeline(video_path):
-    reader = VideoReader(video_path / "dog_lick_sunflower.mp4")
+    reader = OpenCVReader(video_path / "dog_lick_sunflower.mp4")
     processor = GrayscaleProcessor()
 
     for frame in reader.frames():
@@ -24,7 +24,7 @@ def test_reader_processor_pipeline(video_path):
 
 
 def test_grayscale_processor(video_path):
-    reader = VideoReader(video_path / "dog_lick_sunflower.mp4")
+    reader = OpenCVReader(video_path / "dog_lick_sunflower.mp4")
 
     _, frame = reader.read()
     processor = GrayscaleProcessor()

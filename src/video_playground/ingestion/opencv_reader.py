@@ -1,6 +1,7 @@
 import cv2
+from video_playground.ingestion.reader import Reader
 
-from typing import TYPE_CHECKING, Protocol
+from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
     import numpy as np
@@ -8,7 +9,7 @@ if TYPE_CHECKING:
     from collections.abc import Generator
 
 
-class VideoReader(Protocol):
+class OpenCVReader(Reader):
     def __init__(self, path: str | Path):
         self.cap: cv2.VideoCapture = cv2.VideoCapture(str(path))
 
